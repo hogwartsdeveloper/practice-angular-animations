@@ -4,7 +4,18 @@
 <!--  [@clickedDiv]="clickedDivState"-->
 <!--&gt;</div>-->
 
+<!--<div-->
+<!--  (click)="multiState = multiState === 'start' ? 'end' : 'start'"-->
+<!--  [@multi]="multiState"-->
+<!--&gt;</div>-->
+
+<!-- 4-->
+<button class="btn btn-primary" (click)="isVisible=!isVisible">Переключить</button>
+<hr>
 <div
-  (click)="multiState = multiState === 'start' ? 'end' : 'start'"
-  [@multi]="multiState"
-></div>
+  [@divTrigger]="isVisible ? 'show' : 'hide'"
+  class="alert alert-danger"
+  *ngIf="isVisible"
+>
+  Lorem ipsum dolor sit amet.
+</div>
